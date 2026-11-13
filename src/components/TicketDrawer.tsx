@@ -82,7 +82,8 @@ export function TicketDrawer({ ticket, onClose }: TicketDrawerProps) {
       <div
         className="slide-in-right fixed top-0 right-0 h-full z-50 flex flex-col transition-all duration-200"
         style={{
-          width: '580px',
+          width: '100%',
+          maxWidth: '580px',
           background: theme === 'dark' ? '#0C0D12' : '#FFFFFF',
           borderLeft: theme === 'dark' ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.1)',
           boxShadow: theme === 'dark' ? '-24px 0 80px rgba(0,0,0,0.6)' : '-10px 0 40px rgba(15,23,42,0.15)',

@@ -46,7 +46,7 @@ export function KpiIslands() {
   ];
 
   return (
-    <div className="pt-6 grid grid-cols-5 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
       {cards.map((card) => (
         <div
           key={card.label}
@@ -102,7 +102,7 @@ export function KpiIslands() {
 
       {/* Sentiment Distribution */}
       <div
-        className="relative rounded-2xl p-5 overflow-hidden transition-all duration-300"
+        className="col-span-2 md:col-span-1 lg:col-span-1 relative rounded-2xl p-5 overflow-hidden transition-all duration-300"
         style={{
           background: theme === 'dark' ? 'rgba(255,255,255,0.03)' : 'rgba(255, 255, 255, 0.72)',
           backdropFilter: 'blur(24px)',

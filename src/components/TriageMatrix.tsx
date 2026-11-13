@@ -118,7 +118,7 @@ export function TriageMatrix({ onIngest }: TriageMatrixProps) {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `aetherops-tickets-export-${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `triagesphere-tickets-export-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -291,9 +291,9 @@ export function TriageMatrix({ onIngest }: TriageMatrixProps) {
         </button>
       </div>
 
-      {/* Table */}
+      {/* Table with Horizontal Scroll for Mobile */}
       <div
-        className="rounded-2xl overflow-hidden transition-all duration-300"
+        className="w-full overflow-x-auto rounded-2xl transition-all duration-300"
         style={{
           background: theme === 'dark' ? 'transparent' : 'rgba(255, 255, 255, 0.72)',
           backdropFilter: 'blur(28px)',
@@ -305,16 +305,17 @@ export function TriageMatrix({ onIngest }: TriageMatrixProps) {
               : 'none',
         }}
       >
-        {/* Header */}
-        <div
-          className="grid text-xs font-semibold uppercase tracking-wider px-5 py-3"
-          style={{
-            background: theme === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(241, 245, 249, 0.6)',
-            color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : '#64748B',
-            borderBottom: theme === 'dark' ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(0,0,0,0.04)',
-            gridTemplateColumns: '85px 1.1fr 2fr 135px 115px 115px 100px 120px 32px',
-          }}
-        >
+        <div className="min-w-[880px]">
+          {/* Header */}
+          <div
+            className="grid text-xs font-semibold uppercase tracking-wider px-5 py-3"
+            style={{
+              background: theme === 'dark' ? 'rgba(255,255,255,0.02)' : 'rgba(241, 245, 249, 0.6)',
+              color: theme === 'dark' ? 'rgba(255,255,255,0.3)' : '#64748B',
+              borderBottom: theme === 'dark' ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(0,0,0,0.04)',
+              gridTemplateColumns: '85px 1.1fr 2fr 135px 115px 115px 100px 120px 32px',
+            }}
+          >
           <span>ID</span>
           <span>Customer</span>
           <span>Subject</span>
@@ -468,6 +469,7 @@ export function TriageMatrix({ onIngest }: TriageMatrixProps) {
               );
             })
           )}
+        </div>
         </div>
       </div>
 

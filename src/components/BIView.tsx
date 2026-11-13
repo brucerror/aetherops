@@ -68,10 +68,10 @@ export function BIView() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Departmental Volume Chart */}
         <div
-          className="col-span-2 rounded-2xl p-6 transition-all"
+          className="col-span-1 lg:col-span-2 rounded-2xl p-6 transition-all"
           style={{
             background: theme === 'dark' ? 'rgba(255,255,255,0.03)' : '#FFFFFF',
             border: theme === 'dark' ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.08)',
@@ -176,7 +176,7 @@ export function BIView() {
             Evidence-Backed Recommendations
           </h3>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {recommendations.map((rec, i) => (
             <div
               key={i}

@@ -1,4 +1,4 @@
-# AetherOps
+# TriageSphere
 
 > **Enterprise AI Operations & Autonomous Triage Intelligence Hub**  
 > *Architected for ITIL Dual-SLA Compliance, Human-in-the-Loop AI Governance, and Operational Business Intelligence.*
@@ -20,7 +20,7 @@ In enterprise operations and customer support organizations, manual ticket triag
 * **Customer Churn Risk:** Unresolved critical incidents in high-tier accounts (ARR > $100k) directly accelerate account churn.
 * **Operational Labor Overhead:** Senior support engineers and managers lose 20–35% of their weekly capacity manually categorizing, tagging, and assigning support tickets.
 
-**AetherOps** solves this crisis by combining **automated AI classification** with **strict human-in-the-loop oversight**, reducing triage latency from hours to seconds while enforcing ITIL compliance and preserving auditability.
+**TriageSphere** solves this crisis by combining **automated AI classification** with **strict human-in-the-Loop oversight**, reducing triage latency from hours to seconds while enforcing ITIL compliance and preserving auditability.
 
 ---
 
@@ -29,7 +29,7 @@ In enterprise operations and customer support organizations, manual ticket triag
 ```mermaid
 flowchart TD
     subgraph INGESTION ["1. Ingestion Layer"]
-        A["Customer Inquiries / Webhooks / Portal"] --> B["AetherOps Intake Gateway"]
+        A["Customer Inquiries / Webhooks / Portal"] --> B["TriageSphere Intake Gateway"]
     end
 
     subgraph AI_TRIAGE ["2. Neural Classification Engine"]
@@ -64,7 +64,7 @@ flowchart TD
 ## 3. Core Architectural Pillars
 
 ### A. Human-in-the-Loop (HITL) AI Governance
-Rather than relying on unmonitored "black-box" automation, AetherOps enforces enterprise AI safety standards:
+Rather than relying on unmonitored "black-box" automation, TriageSphere enforces enterprise AI safety standards:
 * **Advisory AI Generation:** The AI produces a **Diagnostic Hypothesis** and a draft resolution response.
 * **Agent Empowerment:** Human agents review, edit, and approve communication before dispatch.
 * **One-Click Override:** Support engineers can manually reclassify departments or reprioritize incidents on the fly.
@@ -187,12 +187,12 @@ npm run preview
 
 ## 8. Deployment Guide (Vercel / Netlify)
 
-AetherOps is engineered with a client-side reactive state engine, making it deployable anywhere with zero monthly server costs:
+TriageSphere is engineered with a client-side reactive state engine, making it deployable anywhere with zero monthly server costs:
 
 ### Deploy to Vercel in 2 Minutes:
 1. Push this repository to your GitHub account.
 2. Sign in to [Vercel](https://vercel.com/) with GitHub.
-3. Click **"Add New Project"** and select `aetherops`.
+3. Click **"Add New Project"** and select `aetherops` (or your renamed repo).
 4. Leave default settings (Framework: **Vite**, Build Command: `npm run build`, Output Directory: `dist`).
 5. Click **"Deploy"**. Your live production URL will be ready in under 60 seconds!
 
@@ -200,11 +200,11 @@ AetherOps is engineered with a client-side reactive state engine, making it depl
 
 ## 9. Interview Talking Points for Recruiters & Hiring Teams
 
-When demonstrating AetherOps in an interview for **Business Analyst, Systems Analyst, or Technology Consulting** positions, use this framework:
+When demonstrating TriageSphere in an interview for **Business Analyst, Systems Analyst, or Technology Consulting** positions, use this framework:
 
 > *"As a Business Information Systems student, I recognized that ticket triage is one of the most expensive and error-prone operational bottlenecks in enterprise IT. 
 >
-> In designing AetherOps, I implemented core ITIL service management standards:
+> In designing TriageSphere, I implemented core ITIL service management standards:
 > 1. I separated **First-Response SLA from Resolution SLA** to enforce distinct compliance thresholds.
 > 2. I applied **Human-in-the-Loop AI governance**, ensuring that AI acts strictly as an advisory copilot with mandatory agent review before customer dispatch.
 > 3. I engineered an immutable **Audit Trail** for compliance and SOX governance.

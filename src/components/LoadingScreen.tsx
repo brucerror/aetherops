@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Zap, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { SphereLogo } from './SphereLogo';
 
 interface LoadingScreenProps {
   onFinish: () => void;
 }
 
 const STEPS = [
-  'Initializing AetherOps Neural Core...',
+  'Initializing TriageSphere Neural Core...',
   'Calibrating ITIL Dual-SLA Engine...',
   'Synthesizing Enterprise Audit Matrix...',
   'Operational Readiness Verified. Launching...',
@@ -62,20 +63,12 @@ export function LoadingScreen({ onFinish }: LoadingScreenProps) {
       />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-sm">
-        {/* Pulsing Emblem */}
+        {/* Pulsing Sphere Emblem */}
         <div className="relative mb-6">
-          <div
-            className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl relative z-10"
-            style={{
-              background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%)',
-              boxShadow: '0 0 36px rgba(99,102,241,0.5)',
-            }}
-          >
-            <Zap className="w-8 h-8 text-white animate-pulse" strokeWidth={2.5} />
-          </div>
+          <SphereLogo size={64} />
           {/* Animated ripple ring */}
           <div
-            className="absolute inset-0 rounded-2xl animate-ping opacity-30"
+            className="absolute inset-0 rounded-2xl animate-ping opacity-25 pointer-events-none"
             style={{
               background: 'linear-gradient(135deg, #6366F1, #8B5CF6)',
             }}
@@ -92,11 +85,11 @@ export function LoadingScreen({ onFinish }: LoadingScreenProps) {
             letterSpacing: '-0.02em',
           }}
         >
-          AetherOps
+          TriageSphere
         </h1>
         <div className="flex items-center gap-1.5 text-xs text-indigo-400 font-medium mb-8">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Enterprise Triage Intelligence</span>
+          <span>360° Operational Triage Intelligence</span>
         </div>
 
         {/* Progress Bar Container */}
