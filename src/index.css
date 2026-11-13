@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --color-indigo: #6366F1;
+  --color-emerald: #10B981;
+  --color-amber: #F59E0B;
+  --color-crimson: #F43F5E;
+  --color-canvas: #07080B;
+  --color-surface: #0C0D12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, 'Inter', 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #07080B;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(244, 63, 94, 0.4); }
+  50% { box-shadow: 0 0 16px 6px rgba(244, 63, 94, 0.7); }
+}
+
+@keyframes typing {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.slide-in-right { animation: slide-in-right 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.fade-in { animation: fade-in 0.3s ease-out forwards; }
+.typing-appear { animation: typing 0.15s ease-out forwards; }
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Luxury Light Mode Overrides (VisionOS / Apple Crystal Glass) */
+body.light {
+  background: radial-gradient(ellipse at 15% 0%, rgba(224, 231, 255, 0.75) 0%, transparent 55%),
+              radial-gradient(ellipse at 85% 10%, rgba(224, 242, 254, 0.7) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 90%, rgba(245, 243, 255, 0.65) 0%, transparent 60%),
+              #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+body.light header {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 4px 24px -2px rgba(99, 102, 241, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+body.light .glass {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(28px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.07),
+              0 4px 12px -2px rgba(15, 23, 42, 0.03),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+body.light .glass-hover:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Force high-contrast text on elements with inline white styles in light mode */
+body.light [style*="color: rgb(248, 250, 252)"],
+body.light [style*="color: #f8fafc"],
+body.light [style*="color:#f8fafc"] {
+  color: #0F172A !important;
+}
+
+body.light [style*="color: rgba(255, 255, 255"],
+body.light [style*="color:rgba(255, 255, 255"],
+body.light [style*="color: rgba(255,255,255"] {
+  color: #334155 !important;
+}
+
+body.light [style*="color: rgba(255, 255, 255, 0.3)"],
+body.light [style*="color: rgba(255, 255, 255, 0.4)"],
+body.light [style*="color: rgba(255,255,255,0.3)"],
+body.light [style*="color: rgba(255,255,255,0.4)"],
+body.light [style*="color: rgba(255, 255, 255, 0.5)"],
+body.light [style*="color: rgba(255,255,255,0.5)"] {
+  color: #64748B !important;
+}
+
+body.light [style*="background: rgba(255, 255, 255, 0.02)"],
+body.light [style*="background: rgba(255, 255, 255, 0.03)"],
+body.light [style*="background: rgba(255, 255, 255, 0.04)"],
+body.light [style*="background: rgba(255, 255, 255, 0.05)"],
+body.light [style*="background: rgba(255, 255, 255, 0.06)"],
+body.light [style*="background: rgba(255,255,255,0.02)"],
+body.light [style*="background: rgba(255,255,255,0.03)"],
+body.light [style*="background: rgba(255,255,255,0.04)"],
+body.light [style*="background: rgba(255,255,255,0.05)"],
+body.light [style*="background: rgba(255,255,255,0.06)"],
+body.light [style*="background: rgba(255, 255, 255, 0.08)"],
+body.light [style*="background: rgba(255,255,255,0.08)"] {
+  background: #FFFFFF !important;
+}
+
+body.light [style*="border: 1px solid rgba(255, 255, 255"],
+body.light [style*="border: 1px solid rgba(255,255,255"],
+body.light [style*="border-bottom: 1px solid rgba(255, 255, 255"],
+body.light [style*="border-bottom: 1px solid rgba(255,255,255"] {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light input {
+  color: #0F172A !important;
+}
+
+body.light input::placeholder {
+  color: #94A3B8 !important;
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.ambient-glow-indigo {
+  background: radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+}
+.ambient-glow-emerald {
+  background: radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+}
