@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { AppProvider } from './context/AppContext';
 import { Dashboard } from './components/Dashboard';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -12,6 +13,7 @@ export default function App() {
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <AmbientCursorGlow />
       <Dashboard />
+      <SpeedInsights />
     </AppProvider>
   );
 }
