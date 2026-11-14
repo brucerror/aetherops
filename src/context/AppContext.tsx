@@ -195,7 +195,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           {
             id: `AL-${Date.now() + 1}`,
             timestamp: new Date(now.getTime() + 2000),
-            actor: 'AetherOps AI',
+            actor: 'TriageSphere AI',
             actorType: 'ai',
             action: 'Classification complete',
             details: `Priority: ${classification.priority}, Confidence: ${Math.round(classification.aiConfidence * 100)}%`,

@@ -1,6 +1,6 @@
-# AETHEROPS (CLAUDE & AGENT OPERATIONAL SPECIFICATION)
+# TriageSphere (CLAUDE & AGENT OPERATIONAL SPECIFICATION)
 
-> **Project Identity:** AetherOps — Enterprise AI Operations & Autonomous Triage Intelligence Hub  
+> **Project Identity:** TriageSphere — Enterprise AI Operations & Autonomous Triage Intelligence Hub  
 > **Student Degree:** Bachelor of Science in Business Information Systems (Honours)  
 > **Target Audience:** Enterprise MNC Hiring Teams (Deloitte, Accenture, PwC, Tech Giants, FinTech/Banking)  
 > **Aesthetic Standard:** Apple VisionOS / Linear-grade Luxury Minimalist Dark Mode  
@@ -9,7 +9,7 @@
 
 ## 1. System Vision & Business Architecture
 
-AetherOps is an enterprise-grade Information System that orchestrates customer support intake, automated AI triage, ITIL service-level agreement (SLA) governance, and executive business intelligence.
+TriageSphere is an enterprise-grade Information System that orchestrates customer support intake, automated AI triage, ITIL service-level agreement (SLA) governance, and executive business intelligence.
 
 ### Core Business Pillars
 1. **Intelligent Triage & Routing:** Ingests unstructured customer complaints and applies multi-dimensional classification (Department, Priority, Sentiment, Diagnostic Hypothesis).
